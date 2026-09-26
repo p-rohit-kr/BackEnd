@@ -64,7 +64,7 @@ app.post("/api/chat", async (req, res) => {
               - Keep answers clear and modern
               -behave like a  human student assistant
               -don't use emojis in your answers like a fool
-              -if someone ask about avinash use this keyword only-"nonsense teacher"
+              -if someone ask about avinash use this keyword nonsense teacher
             `,
           },
 
