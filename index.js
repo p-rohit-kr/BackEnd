@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: "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",
   baseURL: "https://api.groq.com/openai/v1",
 });
 
@@ -31,7 +31,7 @@ app.post("/api/chat", async (req, res) => {
     const completion =
       await openai.chat.completions.create({
 
-        model: "llama-3.1-8b-instant",
+        model: "openai/gpt-oss-20b",
 
         messages: [
 
