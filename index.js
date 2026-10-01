@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: "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",
   baseURL: "https://api.groq.com/openai/v1",
 });
 
