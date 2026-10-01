@@ -48,6 +48,9 @@ app.post("/api/chat", async (req, res) => {
                 
                 KNOWLEDGE:
                 CampusHub provides notes, internships and notices.
+
+                FOUNDER:
+                rohit , created CampusHub to help students access notes, internships, and notices easily.
                 
                 RULES:
                 - Be concise.
