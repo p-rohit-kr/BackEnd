@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import OpenAI from "openai";
@@ -7,8 +8,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey:  process.env.GROQ_API_KEY,
   baseURL: "https://api.groq.com/openai/v1",
 });
 
@@ -40,17 +42,16 @@ app.post("/api/chat", async (req, res) => {
             role: "system",
 
             content: `
-                  ROLE:
+               ROLE:
                 You are the official CampusHub AI assistant.
                 
                 GOAL:
                 Help students use CampusHub.
+
+                FOUNDER:Rohit, created CampusHub to help students access notes, internships, and notices easily.
                 
                 KNOWLEDGE:
                 CampusHub provides notes, internships and notices.
-
-                FOUNDER:
-                rohit , created CampusHub to help students access notes, internships, and notices easily.
                 
                 RULES:
                 - Be concise.
